@@ -1,0 +1,65 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+% for \lightning
+\usepackage{stmaryrd}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\newcounter{examplecounter}
+\newenvironment{example}{%
+\refstepcounter{examplecounter}%
+\textbf{Example \arabic{examplecounter}}%
+}
+
+\begin{document}
+\title{Il Teorema di König}
+\author{Francesco Minnocci}
+\maketitle
+\begin{theorem}(König)
+Siano \(\{\mathbf{k}_i\}_{i \in I}, \{\lambda_i\}_{i \in I}\) cardinali tali che \(\forall i \in I, \mathbf{k}_i < \lambda_i\). Allora, \[ \sum_{i \in I}{\mathbf{k}_i} <\prod_{i \in I}{\lambda_i} .\]
+\end{theorem}
+\begin{proof}
+	Siano
+\begin{align*}
+	&A= \bigcup{\{\mathbf{k}_i\times\{i\}\mid i\in I\}}\\
+	&B=\{f\colon I\rightarrow \sup_{i\in I}{\lambda_i}\mid \forall i\in I, f{(i)}\in \lambda_i\} .
+\end{align*}
+	Supponiamo, per assurdo, che esista una funzione suriettiva \[ f\colon A \longrightarrow B \]
+	Infatti, per l'assioma della scelta, ciò è equivalente a supporre che
+	\[ |A|\geq|B|>0 ,\]
+	dove l'insieme di destra è non vuoto visto che i \(\lambda_i\) sono tutti non nulli.\\
+Ora, se \(i \in I\) definiamo
+\begin{align*}
+	f_i\colon &\mathbf{k}_i\longrightarrow\lambda_i\\
+	     &\alpha\longmapsto f{\left( \alpha,i \right) }_{(i)}\in\lambda_i,
+\end{align*}
+e visto che per ipotesi \(f_i\) non può essere suriettiva, si ha \[(\lambda_i\setminus\Im{f_i})\neq\emptyset.\]
+Quindi, usando AC costruiamo
+\begin{align*}
+	g\colon&I\longrightarrow\sup_{i\in I}{\lambda_i}\\
+	&i\longmapsto g{(i)}\in\left( \lambda_i\setminus\Im{f_i} \right)
+.\end{align*}
+Ora, \(g\in B\), ma mostriamo che \(g\notin\Im{(f_i)}\) (ovvero \(f\) non è suriettiva, da cui la contraddizione): se per assurdo
+\begin{align*}
+	\exists i\in I, \alpha\in\mathbf{k}_i\mid g=f{(\alpha,i)} \implies g{(i)}&=f{(\alpha,i)}_{(i)}\\
+										 &=f_i{(\alpha)}\in\Im{f_i},
+\end{align*}
+che è una contraddizione, per costruzione di \(g\). \(\lightning\)
+\end{proof}
+\end{document}

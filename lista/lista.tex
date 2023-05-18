@@ -1,0 +1,118 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+% for \lightning
+\usepackage{stmaryrd}
+\usepackage{geometry}
+\geometry{
+left=10mm,
+right=10mm,
+}
+\usepackage{tikz-cd}
+\usepackage{multicol}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\newcounter{examplecounter}
+\newenvironment{example}{%
+\refstepcounter{examplecounter}%
+\textbf{Example \arabic{examplecounter}}%
+}
+
+\begin{document}
+\title{Elenco di risultati di ETI}
+\author{Francesco Minnocci}
+\date{\vspace{-4ex}}
+\maketitle
+\begin{multicols}{2}
+\begin{itemize}
+	\item Assiomi
+	\item Proposizione: \(\nexists\) l'insieme di tutti gli insiemi
+	\item (Buona) definizione: Coppia di Kuratowski
+	\item Proposizione: Esistenza del prodotto cartesiano
+	\item Definizione: Relazione d'ordine
+	\item Definizione: Assiomi di Peano
+	\item Teorema: \((\omega,\emptyset,\text{succ})\) soddisfa gli Assiomi di Peano
+	\item Teorema: \(<\;\equiv\;\in\) è un ordine totale su \(\omega\)
+	\item Teorema: Induzione forte
+	\item Teorema: Principio del minimo
+	\item Teorema: Ricorsione numerabile
+	\item Teorema: ogni modello di Peano è isomorfo ad \((\omega,\emptyset,\text{succ})\)
+	\item Teorema: ricorsione numerabile v2
+	\item Teorema: Cantor-Bernstein
+	\item Teorema: \(|A|<|\mathcal{P}\left( A \right) |\)
+	\item Definizione: Operazioni sulle cardinalità
+	\item Proposizione: finito \(\implies\) Dedekind-finito
+	\item Proposizione: \(A\) infinito \(\implies\forall n\in\omega,~n<|A|\)
+	\item Proposizione \(|A|\leq|\omega|\implies A\) numerabile o finito
+	\item Lemma: \(\left( A,\;< \right) \) totale finito \(\implies A\sim n\)
+	\item Lemma: Caratterizzazione dei buoni ordini isomorfi ad \(\omega\)
+	\item Proposizione: \(\omega\times\omega\sim\omega\)
+	\item Definizione: \(\Z, \Q\)
+	\item Teorema: di isomorfismo di Cantor
+	\item Definizione: \(\R\) tramite sezioni di Dedekind
+	\item Proposizione: \(\R\) è totalmente ordinato e completo
+	\item Teorema: \(|\R|=2^{\aleph_0}=|\mathcal{P}\left( \N \right)| \)
+	\item Lemma: \(\left( A,\;< \right) \) completo senza estremi e un denso numerabile è isomorfo ad \(\R\)
+	\item Teorema: Tricotomia della relazione d'ordine fra buoni ordini
+	\item Definizione: Operazioni sui buoni ordini
+	\item Definizione: Ordinali
+	\item Teorema: Tricotomia degli ordinali
+	\item Proposizione: \(s\left( x \right) \) è il minimo ordinale maggiore di \(x\)
+	\item Proposizione: esistenza di minimo e sup di un insieme di ordinali
+	\item Proposizione: gli ordinali sono una classe propria
+	\item Definizione: funzione classe
+	\item Teorema: ogni buon ordine è isomorfo ad un unico ordinale
+	\item Induzione transfinita v1 e v2
+	\item Ricorsione transfinita v1 e v2
+	\item Definizione: operazioni fra ordinali
+	\item Teorema: equivalenza tra operazioni fra ordinali e fra buoni ordini
+	\item Proposizione: monotonia delle operazioni fra ordinali
+	\item Proposizione: Esistenza della sottrazione fra ordinali
+	\item Lemma: Esistenza della divisione euclidea fra ordinali
+	\item Teorema: Forma normale di Cantor
+	\item Definizione: Funzioni classi continue \(\text{Ord}\to\text{Ord}\)
+	\item Esistenza di frequenti punti fissi di una funzione crescente continua
+	\item Teorema: Hartogs
+	\item Definizione: numero di Hartogs
+	\item Proposizione: \(\forall X ~~ \text{H}(X)\) è un ordinale iniziale
+	\item Proposizione: gli ordinali iniziali sono una classe propria
+	\item Proposizione: ogni ordinale iniziale infinito è limite
+	\item Proposizione: \(\forall C\) classe propria di ordinali \(\exists!\;F:\text{Ord}\to \text{C}\) crescente biettiva
+	\item Definizione: \(\omega_\alpha\)
+	\item Proposizione: banalità delle operazioni fra Aleph
+	\item Proposizione: AC \(\iff\) ogni funzione suriettiva ha una sezione
+	\item Teorema: equivalenza fra AC, Zorn e Zermelo
+	\item Proposizione: ogni insieme è equipotente ad un ordinale
+	\item Teorema: Tarski
+	\item Corollario: finito \(\iff\) Dedekind-finito
+	\item Proposizione: \(0<|A|\leq|B|\iff\exists\) \begin{tikzcd} A \arrow[r, twoheadrightarrow] & B \end{tikzcd}
+	\item Proposizione: unione \(\aleph_\alpha\) di \(\aleph_\alpha\) è \(\aleph_\alpha\)
+	\item Proposizione: Un ordine totale è u buono sse non ha successioni strettamente decrescenti infinite
+	\item Teorema (Cantor-Bendixon): un chiuso di \(\R\) è si spezza in un perfetto e un numerabile chiuso disgiunti
+	\item Lemma: ogni perfetto non vuoto ha cardinalità \(2^{\aleph_0}\)
+	\item Teorema: König
+  \item Definizione (ed equivalenza): cofinalità v1 e v2
+  \item Teorema: Hausdorff
+  \item Definizione: Gerarchia di Von Neumann
+  \item Proposizione: gli assiomi relativizzati a \(V_*\) sono veri
+  \item Teorema: \(V=V_*\)
+\end{itemize}
+\end{multicols}
+\end{document}
